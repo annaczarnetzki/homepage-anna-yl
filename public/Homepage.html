@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anna-Lena Czarnetzki · Aromaberatung</title>
+<link rel="stylesheet" href="colors_and_type.css">
+<style>
+  html, body { margin: 0; background: var(--bg); color: var(--fg-1); }
+  body { font-family: var(--font-body); }
+  a { color: inherit; }
+  *:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; border-radius: 6px; }
+
+  /* ============ Akzent-Themen ============================================
+     Die Tweaks ändern --brand / --accent-strong etc. live über data-accent.
+     Defaults bleiben Sage/Purple/Gold-Mix aus dem Design-System. */
+
+  :root {
+    --accent-strong: var(--gold-500);
+    --ink-300: var(--ink-400);
+  }
+  [data-accent="purple"] {
+    --brand: var(--purple-500);
+    --brand-hover: var(--purple-600);
+    --brand-soft: var(--purple-50);
+    --bg-tinted: var(--purple-50);
+    --link: var(--purple-600);
+    --link-hover: var(--purple-700);
+    --focus-ring: var(--purple-400);
+    --accent-strong: var(--gold-500);
+  }
+  [data-accent="sage"] {
+    /* Sage selbst gibts im Design-System nicht – wir leiten warm-grün aus oklch ab */
+    --brand: oklch(45% 0.06 150);
+    --brand-hover: oklch(38% 0.07 150);
+    --brand-soft: oklch(96% 0.025 150);
+    --bg-tinted: oklch(96% 0.025 150);
+    --link: oklch(40% 0.06 150);
+    --link-hover: oklch(32% 0.07 150);
+    --focus-ring: oklch(60% 0.08 150);
+    --accent-strong: var(--gold-500);
+  }
+  [data-accent="clay"] {
+    --brand: oklch(50% 0.11 38);
+    --brand-hover: oklch(42% 0.12 38);
+    --brand-soft: oklch(95% 0.03 38);
+    --bg-tinted: oklch(95% 0.03 38);
+    --link: oklch(45% 0.11 38);
+    --link-hover: oklch(38% 0.12 38);
+    --focus-ring: oklch(60% 0.12 38);
+    --accent-strong: oklch(55% 0.13 50);
+  }
+  [data-accent="gold"] {
+    --brand: var(--gold-600);
+    --brand-hover: var(--gold-700);
+    --brand-soft: var(--gold-50);
+    --bg-tinted: var(--gold-50);
+    --link: var(--gold-700);
+    --link-hover: var(--ink-800);
+    --focus-ring: var(--gold-400);
+    --accent-strong: var(--purple-500);
+  }
+
+  /* ============ Schriftpaarungen ========================================= */
+  [data-fontpair="classic"] {
+    --font-display: 'Cormorant Garamond', Garamond, serif;
+    --font-body: 'Nunito Sans', system-ui, sans-serif;
+  }
+  [data-fontpair="modern"] {
+    --font-display: 'Fraunces', 'Cormorant Garamond', serif;
+    --font-body: 'Inter', 'Nunito Sans', system-ui, sans-serif;
+  }
+  [data-fontpair="editorial"] {
+    --font-display: 'DM Serif Display', 'Cormorant Garamond', serif;
+    --font-body: 'Work Sans', 'Nunito Sans', system-ui, sans-serif;
+  }
+
+  /* responsive grids – keep things readable on small screens */
+  @media (max-width: 880px) {
+    section [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+<!-- Optionale Webfonts für die Schriftpaarungen -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=DM+Serif+Display&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- Tweaks shell -->
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+
+<!-- Design-system icons -->
+<script type="text/babel" src="ds-icon.jsx"></script>
+
+<!-- Shared page-hero with image -->
+<script type="text/babel" src="page-hero.jsx"></script>
+
+<!-- UI-Kit Bausteine -->
+<script type="text/babel" src="ui_kits/website/SiteHeader.jsx"></script>
+<script type="text/babel" src="ui_kits/website/SiteFooter.jsx"></script>
+<script type="text/babel" src="ui_kits/website/BookingModal.jsx"></script>
+<script type="text/babel" src="ui_kits/website/AboutPage.jsx"></script>
+<script type="text/babel" src="ui_kits/website/BeratungPage.jsx"></script>
+
+<!-- Eigene Homepage-Sektionen -->
+<script type="text/babel" src="homepage-hero.jsx"></script>
+<script type="text/babel" src="homepage-uebersicht.jsx"></script>
+<script type="text/babel" src="homepage-band.jsx"></script>
+<script type="text/babel" src="homepage-teaser.jsx"></script>
+<script type="text/babel" src="homepage-cta.jsx"></script>
+<script type="text/babel" src="homepage-werte.jsx"></script>
+<script type="text/babel" src="homepage-process.jsx"></script>
+<script type="text/babel" src="homepage-about.jsx"></script>
+<script type="text/babel" src="homepage-kontakt.jsx"></script>
+<script type="text/babel" src="stub-pages.jsx"></script>
+<script type="text/babel" src="allgemein-kapitel.jsx"></script>
+<script type="text/babel" src="allgemein-page.jsx"></script>
+<script type="text/babel" src="familie-page.jsx"></script>
+<script type="text/babel" src="hund-page.jsx"></script>
+<script type="text/babel" src="pferde-page.jsx"></script>
+<script type="text/babel" src="weg-page.jsx"></script>
+
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accent": "purple",
+  "fontPair": "editorial",
+  "heroLayout": "typo-first",
+  "headline": "Schön, dass du da bist.",
+  "showImages": true,
+  "showDiplom": true
+}/*EDITMODE-END*/;
+
+function HomePage({ onBook, tweaks, setPage }) {
+  return (
+    <div data-screen-label="01 Willkommen">
+      <HomepageHero onBook={onBook}
+                    onAbout={()=>{setPage('about'); window.scrollTo({top:0});}}
+                    layout={tweaks.heroLayout}
+                    headline={tweaks.headline}
+                    showImage={tweaks.showImages}
+                    showDiplom={false}/>
+      <HomepageUebersicht setPage={setPage}/>
+      <HomepageBand/>
+      <HomepageTeaser setPage={setPage}/>
+      <HomepageCTA onBook={onBook}/>
+      <HomepageKontakt onBook={onBook}/>
+    </div>
+  );
+}
+
+function App() {
+  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+  const initial = (typeof location !== 'undefined' && location.hash.replace('#','')) || 'home';
+  const validPages = ['home','allgemein','familie','hund','pferde','about','weg','beratung'];
+  const [page, setPage] = React.useState(validPages.includes(initial) ? initial : 'home');
+  const [booking, setBooking] = React.useState(false);
+  React.useEffect(() => { location.hash = page; }, [page]);
+
+  // Apply accent + font tweaks at the document root so the entire tree (incl. UI-Kit pages) updates.
+  React.useEffect(() => {
+    document.documentElement.dataset.accent = tweaks.accent;
+    document.documentElement.dataset.fontpair = tweaks.fontPair;
+  }, [tweaks.accent, tweaks.fontPair]);
+
+  const onBook = () => setBooking(true);
+
+  // Header expects setPage with the kit's own keys (about/beratung/onkologie).
+  // We extend it with 'home' for our editorial landing.
+  const setPageProxy = (key) => {
+    // Kit's logo click goes to 'about' — re-route to home.
+    if (key === 'about' && page === 'home') return setPage('about');
+    setPage(key);
+  };
+
+  return (
+    <React.Fragment>
+      <CustomHeader page={page} setPage={setPage} onBook={onBook}/>
+      <main>
+        {page==='home' && <HomePage onBook={onBook} tweaks={tweaks} setPage={setPage}/>}
+        {page==='allgemein' && <AllgemeinPage onBook={onBook}/>}
+        {page==='familie' && <FamiliePage onBook={onBook}/>}
+        {page==='hund' && <HundPage onBook={onBook}/>}
+        {page==='pferde' && <PferdePage onBook={onBook}/>}
+        {page==='about' && <AboutPage onBook={onBook}/>}
+        {page==='weg' && <WegPage onBook={onBook}/>}
+        {page==='beratung' && <BeratungPage onBook={onBook}/>}
+      </main>
+      <SiteFooter setPage={setPage} onBook={onBook}/>
+      <BookingModal open={booking} onClose={()=>setBooking(false)}/>
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection label="Akzentfarbe">
+          <TweakRadio label="Theme" value={tweaks.accent}
+                      options={[
+                        {value:'purple', label:'Lila'},
+                        {value:'sage', label:'Sage'},
+                        {value:'clay', label:'Clay'},
+                        {value:'gold', label:'Gold'},
+                      ]}
+                      onChange={(v)=>setTweak('accent', v)}/>
+        </TweakSection>
+
+        <TweakSection label="Schriftpaarung">
+          <TweakRadio label="Stil" value={tweaks.fontPair}
+                      options={[
+                        {value:'classic', label:'Klassisch'},
+                        {value:'modern', label:'Modern'},
+                        {value:'editorial', label:'Editorial'},
+                      ]}
+                      onChange={(v)=>setTweak('fontPair', v)}/>
+        </TweakSection>
+
+        <TweakSection label="Hero-Layout">
+          <TweakRadio label="Variante" value={tweaks.heroLayout}
+                      options={[
+                        {value:'typo-first', label:'Typo'},
+                        {value:'split', label:'Split'},
+                        {value:'editorial', label:'Editorial'},
+                      ]}
+                      onChange={(v)=>setTweak('heroLayout', v)}/>
+          <TweakText label="Headline" value={tweaks.headline}
+                     onChange={(v)=>setTweak('headline', v)}/>
+        </TweakSection>
+
+        <TweakSection label="Sichtbarkeit">
+          <TweakToggle label="Bilder zeigen" value={tweaks.showImages}
+                       onChange={(v)=>setTweak('showImages', v)}/>
+          <TweakToggle label="Diplom-Siegel" value={tweaks.showDiplom}
+                       onChange={(v)=>setTweak('showDiplom', v)}/>
+        </TweakSection>
+
+        <TweakSection label="Seitenwechsel">
+          <TweakRadio label="Seite" value={page}
+                      options={[
+                        {value:'home', label:'Willkommen'},
+                        {value:'allgemein', label:'Öle'},
+                        {value:'familie', label:'Familie'},
+                        {value:'hund', label:'Hund'},
+                        {value:'pferde', label:'Pferd'},
+                        {value:'about', label:'Über mich'},
+                        {value:'weg', label:'Der Weg'},
+                      ]}
+                      onChange={(v)=>{setPage(v); window.scrollTo({top:0});}}/>
+        </TweakSection>
+      </TweaksPanel>
+    </React.Fragment>
+  );
+}
+
+// ── Custom Header — derived from kit but adds 'Home' tab ──────────────────
+function CustomHeader({ page, setPage, onBook }) {
+  const [scrolled, setScrolled] = React.useState(false);
+  React.useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  const nav = (key, label) => (
+    <a href={'#'+key} onClick={(e)=>{e.preventDefault(); setPage(key); window.scrollTo({top:0});}} style={{
+      fontFamily: 'var(--font-body)', fontSize: 14, fontWeight: 500,
+      color: page===key ? 'var(--brand)' : 'var(--ink-700)',
+      textDecoration: 'none', position: 'relative', paddingBottom: 4,
+      borderBottom: page===key ? '1.5px solid var(--accent-strong)' : '1.5px solid transparent',
+      letterSpacing:'0.01em',
+    }}>{label}</a>
+  );
+  return (
+    <header style={{
+      position: 'sticky', top: 0, zIndex: 40,
+      backdropFilter: 'blur(12px) saturate(1.2)',
+      WebkitBackdropFilter: 'blur(12px) saturate(1.2)',
+      background: scrolled ? 'rgba(250, 246, 239, 0.88)' : 'rgba(250, 246, 239, 0)',
+      borderBottom: scrolled ? '1px solid var(--mist-300)' : '1px solid transparent',
+      transition: 'all 250ms var(--ease-standard)',
+    }}>
+      <div style={{
+        maxWidth: 1240, margin: '0 auto', height: 76,
+        padding: '0 32px',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      }}>
+        <a href="#home" onClick={(e)=>{e.preventDefault(); setPage('home'); window.scrollTo({top:0});}}
+           style={{ display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none' }}>
+          <img src="assets/seal-gold.png" alt="Anna-Lena Czarnetzki · Aromaberaterin, Sozialarbeiterin, Krankenschwester"
+               style={{
+                 width: 56, height: 56, borderRadius: 999,
+                 background: 'var(--bg-warm)',
+                 padding: 2,
+                 boxShadow: 'var(--shadow-sm)',
+                 flexShrink: 0,
+               }}/>
+          <div style={{display:'flex', flexDirection:'column', lineHeight:1.1}}>
+            <span style={{
+              fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 20,
+              color: 'var(--ink-900)', letterSpacing: '-0.005em',
+            }}>Anna-Lena Czarnetzki</span>
+            <span style={{
+              fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 10,
+              color: 'var(--accent-strong)', letterSpacing: '0.22em', textTransform:'uppercase',
+              marginTop: 3,
+            }}>Aromaberatung</span>
+          </div>
+        </a>
+        <nav style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
+          {nav('home', 'Willkommen')}
+          {nav('allgemein', 'Ätherische Öle')}
+          {nav('familie', 'Familie')}
+          {nav('hund', 'Hund')}
+          {nav('pferde', 'Pferd')}
+          {nav('about', 'Über mich')}
+          {nav('weg', 'Der Weg zu den Ölen')}
+          <button onClick={onBook} style={{
+            fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 14,
+            color: 'var(--cream-50)', background: 'var(--brand)',
+            border: 'none', padding: '10px 22px', borderRadius: 999, cursor: 'pointer',
+          }}>Termin</button>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
