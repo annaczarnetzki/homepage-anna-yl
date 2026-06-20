@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="98" fill="#FAF6EF" stroke="#3F4B35" stroke-width="1.5"></circle>
+  
+  <path d="M100 152 C 94 120, 92 92, 100 56" fill="none" stroke="#647654" stroke-width="1.6" stroke-linecap="round"></path>
+  
+  <g fill="#647654">
+    <ellipse cx="92" cy="138" rx="11" ry="3" transform="rotate(-20 92 138)"></ellipse>
+    <ellipse cx="108" cy="124" rx="12" ry="3.2" transform="rotate(20 108 124)"></ellipse>
+    <ellipse cx="91" cy="110" rx="13" ry="3.3" transform="rotate(-18 91 110)"></ellipse>
+    <ellipse cx="109" cy="94" rx="13" ry="3.3" transform="rotate(18 109 94)"></ellipse>
+    <ellipse cx="93" cy="78" rx="11" ry="3" transform="rotate(-16 93 78)"></ellipse>
+    <ellipse cx="107" cy="64" rx="9" ry="2.6" transform="rotate(14 107 64)"></ellipse>
+  </g>
+  
+  <text x="100" y="180" text-anchor="middle" font-family="Cormorant Garamond, Garamond, serif" font-weight="500" font-size="22" fill="#3F4B35" letter-spacing="0.18em">ALC</text>
+</svg>
