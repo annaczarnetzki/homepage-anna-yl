@@ -18,7 +18,7 @@ function HomepageBand() {
             boxShadow:'var(--shadow-md)',
             border:'1px solid var(--mist-300)',
           }}>
-            <img src="assets/heros/hero-allgemein.png"
+            <img src="assets/heros/hero-allgemein.jpg"
                  alt="Stilleben — ätherische Öle, Diffuser, Lavendel, Eukalyptus"
                  style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
           </div>

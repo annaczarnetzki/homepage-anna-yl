@@ -9,7 +9,7 @@ function AllgemeinPage({ onBook }) {
         eyebrow="Ätherische Öle — allgemein"
         headline="Die Kraft der ätherischen Öle."
         subtitle="Sanft. Vielseitig. Natürlich."
-        image="assets/heros/allgemein-hero.png"
+        image="assets/heros/allgemein-hero.jpg"
         imageAlt="Ätherische Öle inmitten von Lavendel, Kamille, Eukalyptus und Zitronen"
       />
 
@@ -27,7 +27,7 @@ function AllgemeinPage({ onBook }) {
               aspectRatio:'4/3', boxShadow:'var(--shadow-md)',
               border:'1px solid var(--mist-300)',
             }}>
-              <img src="assets/heros/allgemein-quellen.png"
+              <img src="assets/heros/allgemein-quellen.jpg"
                    alt="Blüten, Blätter, Harz, Schalen, Kräuter — Quellen ätherischer Öle"
                    style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
             </div>
@@ -83,7 +83,7 @@ function AllgemeinPage({ onBook }) {
                 aspectRatio:'4/3', boxShadow:'var(--shadow-md)',
                 border:'1px solid var(--mist-300)',
               }}>
-                <img src="assets/heros/allgemein-destillation.png"
+                <img src="assets/heros/allgemein-destillation.jpg"
                      alt="Destillationsapparatur mit ätherischen Ölen"
                      style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
               </div>
@@ -230,7 +230,7 @@ function AllgemeinPage({ onBook }) {
           position:'relative', overflow:'hidden',
           maxHeight: 520,
         }}>
-          <img src="assets/heros/allgemein-auszeiten.png"
+          <img src="assets/heros/allgemein-auszeiten.jpg"
                alt="Kleine Auszeiten für Körper & Seele — Diffuser, Tee, Lavendel, Notizbuch"
                style={{display:'block', width:'100%', height:'auto', objectFit:'cover'}}/>
         </div>

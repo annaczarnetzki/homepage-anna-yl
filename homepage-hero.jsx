@@ -102,7 +102,7 @@ function HomepageHero({ onBook, onAbout, layout, headline, showImage, showDiplom
               aspectRatio: '16/9',
               maxHeight: 520,
             }}>
-              <img src="assets/heros/hero-familie.png"
+              <img src="assets/heros/hero-familie.jpg"
                    alt="Anna-Lena mit ihren beiden Hunden"
                    style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
               {showDiplom && (
@@ -166,7 +166,7 @@ function HomepageHero({ onBook, onAbout, layout, headline, showImage, showDiplom
                   boxShadow: 'var(--shadow-lg)', aspectRatio: '4/5',
                   border: '1px solid var(--mist-300)',
                 }}>
-                  <img src="assets/portrait-anna-lena.png" alt="Anna-Lena Czarnetzki"
+                  <img src="assets/portrait-anna-lena.jpg" alt="Anna-Lena Czarnetzki"
                        style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
                 </div>
                 {showDiplom && (
@@ -244,7 +244,7 @@ function HomepageHero({ onBook, onAbout, layout, headline, showImage, showDiplom
                   width: 200, height: 250, boxShadow:'var(--shadow-md)',
                   border:'1px solid var(--mist-300)',
                 }}>
-                  <img src="assets/portrait-anna-lena.png" alt="Anna-Lena"
+                  <img src="assets/portrait-anna-lena.jpg" alt="Anna-Lena"
                        style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
                 </div>
                 {showDiplom && (

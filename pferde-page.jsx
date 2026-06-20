@@ -9,7 +9,7 @@ function PferdePage({ onBook }) {
         eyebrow="Pferdearomatologie"
         headline="Ätherische Öle für dein Pferd."
         subtitle="Ehrlich. Sanft. Wirkungsvoll."
-        image="assets/heros/pferde-hero.png"
+        image="assets/heros/pferde-hero.jpg"
         imageAlt="Ätherische Öle im Stall — Pferd im Hintergrund, Lavendel und Pflegebürste"
       />
 
@@ -27,7 +27,7 @@ function PferdePage({ onBook }) {
               aspectRatio:'4/3', boxShadow:'var(--shadow-md)',
               border:'1px solid var(--mist-300)',
             }}>
-              <img src="assets/heros/pferde-interessiert.png"
+              <img src="assets/heros/pferde-interessiert.jpg"
                    alt="Pferd schnuppert interessiert an einer Flasche Lavendelöl"
                    style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
             </div>
@@ -143,7 +143,7 @@ function PferdePage({ onBook }) {
               aspectRatio:'4/3', boxShadow:'var(--shadow-md)',
               border:'1px solid var(--mist-300)',
             }}>
-              <img src="assets/heros/pferde-entspannt.png"
+              <img src="assets/heros/pferde-entspannt.jpg"
                    alt="Anna-Lena beruhigt ein Pferd mit Lavendelöl im Lavendelfeld"
                    style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
             </div>
@@ -378,7 +378,7 @@ function PferdePage({ onBook }) {
               aspectRatio:'4/3', boxShadow:'var(--shadow-md)',
               border:'1px solid var(--mist-300)',
             }}>
-              <img src="assets/heros/pferde-sonnenuntergang.png"
+              <img src="assets/heros/pferde-sonnenuntergang.jpg"
                    alt="Inniger Moment zwischen Mensch und Pferd im Sonnenuntergang"
                    style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
             </div>

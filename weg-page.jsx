@@ -10,7 +10,7 @@ function WegPage({ onBook }) {
         eyebrow="Der Weg zu den Ölen"
         headline="Schön, dass du da bist."
         subtitle="Du darfst einfach mal schnuppern, im wörtlichen wie im übertragenen Sinn."
-        image="assets/heros/weg-hero.png"
+        image="assets/heros/weg-hero.jpg"
         imageAlt="Young Living Öle — Valor, Frankincense, Believe, Lavender, Lemon — mit Diffuser und Lavendel"
       />
 
@@ -100,7 +100,7 @@ function WegPage({ onBook }) {
               aspectRatio:'4/3', boxShadow:'var(--shadow-md)',
               border:'1px solid var(--mist-300)',
             }}>
-              <img src="assets/heros/allgemein-quellen.png"
+              <img src="assets/heros/allgemein-quellen.jpg"
                    alt="Pflanzliche Quellen ätherischer Öle"
                    style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
             </div>
