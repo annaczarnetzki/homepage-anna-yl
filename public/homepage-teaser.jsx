@@ -15,7 +15,7 @@ function HomepageTeaser({ setPage }) {
             aspectRatio:'4/5', boxShadow:'var(--shadow-md)',
             border:'1px solid var(--mist-300)',
           }}>
-            <img src="assets/heros/hero-about.png" alt="Anna-Lena Czarnetzki"
+            <img src="assets/heros/hero-about.jpg" alt="Anna-Lena Czarnetzki"
                  style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
           </div>
           <div>

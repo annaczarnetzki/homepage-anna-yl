@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" data-accent="purple" data-fontpair="editorial">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -93,9 +93,6 @@
 <body>
 <div id="root"></div>
 
-<!-- Tweaks shell -->
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-
 <!-- Design-system icons -->
 <script type="text/babel" src="ds-icon.jsx"></script>
 
@@ -103,7 +100,6 @@
 <script type="text/babel" src="page-hero.jsx"></script>
 
 <!-- UI-Kit Bausteine -->
-<script type="text/babel" src="ui_kits/website/SiteHeader.jsx"></script>
 <script type="text/babel" src="ui_kits/website/SiteFooter.jsx"></script>
 <script type="text/babel" src="ui_kits/website/BookingModal.jsx"></script>
 <script type="text/babel" src="ui_kits/website/AboutPage.jsx"></script>
@@ -115,9 +111,6 @@
 <script type="text/babel" src="homepage-band.jsx"></script>
 <script type="text/babel" src="homepage-teaser.jsx"></script>
 <script type="text/babel" src="homepage-cta.jsx"></script>
-<script type="text/babel" src="homepage-werte.jsx"></script>
-<script type="text/babel" src="homepage-process.jsx"></script>
-<script type="text/babel" src="homepage-about.jsx"></script>
 <script type="text/babel" src="homepage-kontakt.jsx"></script>
 <script type="text/babel" src="stub-pages.jsx"></script>
 <script type="text/babel" src="allgemein-kapitel.jsx"></script>
@@ -128,23 +121,14 @@
 <script type="text/babel" src="weg-page.jsx"></script>
 
 <script type="text/babel">
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accent": "purple",
-  "fontPair": "editorial",
-  "heroLayout": "typo-first",
-  "headline": "Schön, dass du da bist.",
-  "showImages": true,
-  "showDiplom": true
-}/*EDITMODE-END*/;
-
-function HomePage({ onBook, tweaks, setPage }) {
+function HomePage({ onBook, setPage }) {
   return (
     <div data-screen-label="01 Willkommen">
       <HomepageHero onBook={onBook}
                     onAbout={()=>{setPage('about'); window.scrollTo({top:0});}}
-                    layout={tweaks.heroLayout}
-                    headline={tweaks.headline}
-                    showImage={tweaks.showImages}
+                    layout="typo-first"
+                    headline="Schön, dass du da bist."
+                    showImage={true}
                     showDiplom={false}/>
       <HomepageUebersicht setPage={setPage}/>
       <HomepageBand/>
@@ -156,35 +140,19 @@ function HomePage({ onBook, tweaks, setPage }) {
 }
 
 function App() {
-  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
-
   const initial = (typeof location !== 'undefined' && location.hash.replace('#','')) || 'home';
   const validPages = ['home','allgemein','familie','hund','pferde','about','weg','beratung'];
   const [page, setPage] = React.useState(validPages.includes(initial) ? initial : 'home');
   const [booking, setBooking] = React.useState(false);
   React.useEffect(() => { location.hash = page; }, [page]);
 
-  // Apply accent + font tweaks at the document root so the entire tree (incl. UI-Kit pages) updates.
-  React.useEffect(() => {
-    document.documentElement.dataset.accent = tweaks.accent;
-    document.documentElement.dataset.fontpair = tweaks.fontPair;
-  }, [tweaks.accent, tweaks.fontPair]);
-
   const onBook = () => setBooking(true);
-
-  // Header expects setPage with the kit's own keys (about/beratung/onkologie).
-  // We extend it with 'home' for our editorial landing.
-  const setPageProxy = (key) => {
-    // Kit's logo click goes to 'about' — re-route to home.
-    if (key === 'about' && page === 'home') return setPage('about');
-    setPage(key);
-  };
 
   return (
     <React.Fragment>
       <CustomHeader page={page} setPage={setPage} onBook={onBook}/>
       <main>
-        {page==='home' && <HomePage onBook={onBook} tweaks={tweaks} setPage={setPage}/>}
+        {page==='home' && <HomePage onBook={onBook} setPage={setPage}/>}
         {page==='allgemein' && <AllgemeinPage onBook={onBook}/>}
         {page==='familie' && <FamiliePage onBook={onBook}/>}
         {page==='hund' && <HundPage onBook={onBook}/>}
@@ -195,62 +163,6 @@ function App() {
       </main>
       <SiteFooter setPage={setPage} onBook={onBook}/>
       <BookingModal open={booking} onClose={()=>setBooking(false)}/>
-
-      <TweaksPanel title="Tweaks">
-        <TweakSection label="Akzentfarbe">
-          <TweakRadio label="Theme" value={tweaks.accent}
-                      options={[
-                        {value:'purple', label:'Lila'},
-                        {value:'sage', label:'Sage'},
-                        {value:'clay', label:'Clay'},
-                        {value:'gold', label:'Gold'},
-                      ]}
-                      onChange={(v)=>setTweak('accent', v)}/>
-        </TweakSection>
-
-        <TweakSection label="Schriftpaarung">
-          <TweakRadio label="Stil" value={tweaks.fontPair}
-                      options={[
-                        {value:'classic', label:'Klassisch'},
-                        {value:'modern', label:'Modern'},
-                        {value:'editorial', label:'Editorial'},
-                      ]}
-                      onChange={(v)=>setTweak('fontPair', v)}/>
-        </TweakSection>
-
-        <TweakSection label="Hero-Layout">
-          <TweakRadio label="Variante" value={tweaks.heroLayout}
-                      options={[
-                        {value:'typo-first', label:'Typo'},
-                        {value:'split', label:'Split'},
-                        {value:'editorial', label:'Editorial'},
-                      ]}
-                      onChange={(v)=>setTweak('heroLayout', v)}/>
-          <TweakText label="Headline" value={tweaks.headline}
-                     onChange={(v)=>setTweak('headline', v)}/>
-        </TweakSection>
-
-        <TweakSection label="Sichtbarkeit">
-          <TweakToggle label="Bilder zeigen" value={tweaks.showImages}
-                       onChange={(v)=>setTweak('showImages', v)}/>
-          <TweakToggle label="Diplom-Siegel" value={tweaks.showDiplom}
-                       onChange={(v)=>setTweak('showDiplom', v)}/>
-        </TweakSection>
-
-        <TweakSection label="Seitenwechsel">
-          <TweakRadio label="Seite" value={page}
-                      options={[
-                        {value:'home', label:'Willkommen'},
-                        {value:'allgemein', label:'Öle'},
-                        {value:'familie', label:'Familie'},
-                        {value:'hund', label:'Hund'},
-                        {value:'pferde', label:'Pferd'},
-                        {value:'about', label:'Über mich'},
-                        {value:'weg', label:'Der Weg'},
-                      ]}
-                      onChange={(v)=>{setPage(v); window.scrollTo({top:0});}}/>
-        </TweakSection>
-      </TweaksPanel>
     </React.Fragment>
   );
 }

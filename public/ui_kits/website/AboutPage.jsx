@@ -9,7 +9,7 @@ function AboutPage({ onBook }) {
         eyebrow="Über mich"
         headline="Hallo, ich bin Anna-Lena."
         subtitle={<>Mama. Krankenschwester. Sozialarbeiterin. Aromaberaterin.<br/>Und vor allem: ein Mensch, der weiß, wie kostbar das Leben ist.</>}
-        image="assets/heros/hero-about.png"
+        image="assets/heros/hero-about.jpg"
         imageAlt="Anna-Lena Czarnetzki — Portrait im Herbst"
       />
 
@@ -89,7 +89,7 @@ function AboutPage({ onBook }) {
                 boxShadow:'var(--shadow-md)',
                 border:'1px solid var(--mist-300)',
               }}>
-                <img src="assets/heros/about-pferd.png"
+                <img src="assets/heros/about-pferd.jpg"
                      alt="Anna-Lena Stirn an Stirn mit ihrem Pferd im Lavendelfeld bei Sonnenuntergang"
                      style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
               </div>
@@ -203,7 +203,7 @@ function AboutPage({ onBook }) {
           width:'100%', maxHeight: 520, overflow:'hidden',
           position:'relative',
         }}>
-          <img src="assets/heros/hero-onkologie.png"
+          <img src="assets/heros/hero-onkologie.jpg"
                alt="Anna-Lena in ihrer Praxis mit dem Ölekoffer"
                style={{display:'block', width:'100%', height:'auto', objectFit:'cover'}}/>
         </div>

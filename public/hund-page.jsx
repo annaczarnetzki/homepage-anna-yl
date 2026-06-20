@@ -9,7 +9,7 @@ function HundPage({ onBook }) {
         eyebrow="Hund"
         headline="Ätherische Öle im Alltag mit deinem Hund"
         subtitle="Sanft begleiten, immer mit Respekt vor dem, was dein Hund verträgt."
-        image="assets/heros/hund-hero.png"
+        image="assets/heros/hund-hero.jpg"
         imageAlt="Familie mit Golden Retriever auf einer Picknickdecke im Lavendelfeld bei Sonnenuntergang"
       />
 
@@ -64,7 +64,7 @@ function HundPage({ onBook }) {
               aspectRatio:'3/4', boxShadow:'var(--shadow-md)',
               border:'1px solid var(--mist-300)', maxHeight:520, justifySelf:'center',
             }}>
-              <img src="assets/heros/hund-fenster.png"
+              <img src="assets/heros/hund-fenster.jpg"
                    alt="Hund am Fenster mit Diffuser und Lavendel im Abendlicht"
                    style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
             </div>
@@ -78,12 +78,12 @@ function HundPage({ onBook }) {
           display:'grid', gridTemplateColumns:'1fr 1fr', gap:0,
         }}>
           <div style={{aspectRatio:'3/2', overflow:'hidden'}}>
-            <img src="assets/heros/hund-rennen.png"
+            <img src="assets/heros/hund-rennen.jpg"
                  alt="Australian Shepherd läuft fröhlich über einen Feldweg"
                  style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
           </div>
           <div style={{aspectRatio:'3/2', overflow:'hidden'}}>
-            <img src="assets/heros/hund-wald.png"
+            <img src="assets/heros/hund-wald.jpg"
                  alt="Familie spaziert mit ihrem Hund durch den Wald"
                  style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
           </div>

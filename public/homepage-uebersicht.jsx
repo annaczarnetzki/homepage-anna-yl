@@ -2,16 +2,16 @@
 // "Was dich auf dieser Seite erwartet" — 4 Übersichtskarten mit Links zu den Unterseiten.
 function HomepageUebersicht({ setPage }) {
   const cards = [
-    { key:'allgemein', img:'assets/heros/allgemein-hero.png', sub:'allgemein',
+    { key:'allgemein', img:'assets/heros/allgemein-hero.jpg', sub:'allgemein',
       t:'Ätherische Öle',
       d:'Was Öle sind, wie sie wirken und wie du sie achtsam in deinen Alltag holst.' },
-    { key:'familie', img:'assets/heros/familie-hero.png', sub:'für die ganze Familie',
+    { key:'familie', img:'assets/heros/familie-hero.jpg', sub:'für die ganze Familie',
       t:'Familie & Kinder',
       d:'Sanfte Begleitung für die Kleinsten und die ganze Familie.' },
-    { key:'hund', img:'assets/heros/hero-willkommen-neu.png', sub:'Aromatologie für deinen Hund',
+    { key:'hund', img:'assets/heros/hero-willkommen-neu.jpg', sub:'Aromatologie für deinen Hund',
       t:'Hund',
       d:'Achtsame Rituale für deinen treuen Vierbeiner.' },
-    { key:'pferde', img:'assets/heros/pferde-hero.png', sub:'Aromatologie für dein Pferd',
+    { key:'pferde', img:'assets/heros/pferde-hero.jpg', sub:'Aromatologie für dein Pferd',
       t:'Pferde',
       d:'Aromatologie für dein Pferd, ehrlich und wirkungsvoll.' },
   ];

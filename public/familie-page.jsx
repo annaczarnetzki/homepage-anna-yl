@@ -9,7 +9,7 @@ function FamiliePage({ onBook }) {
         eyebrow="Familie & Kinder"
         headline="Sanfte Begleitung für die ganze Familie."
         subtitle="Von den Kleinsten bis zu den Großen."
-        image="assets/heros/familie-hero.png"
+        image="assets/heros/familie-hero.jpg"
         imageAlt="Kinderzimmer-Stilleben mit Teddy, Regenbogen, Kinderölen"
       />
 
@@ -39,7 +39,7 @@ function FamiliePage({ onBook }) {
               aspectRatio:'4/3', boxShadow:'var(--shadow-md)',
               border:'1px solid var(--mist-300)',
             }}>
-              <img src="assets/heros/familie-natuerlich.png"
+              <img src="assets/heros/familie-natuerlich.jpg"
                    alt="Natürliche Unterstützung — Ruhe, Schlaf, Wohlbefinden, Atemwege, Muskeln & Gelenke"
                    style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
             </div>
@@ -158,7 +158,7 @@ function FamiliePage({ onBook }) {
               maxWidth:320, justifySelf:'center', width:'100%',
               border:'1px solid var(--mist-300)',
             }}>
-              <img src="assets/heros/familie-kind-mutter.png"
+              <img src="assets/heros/familie-kind-mutter.jpg"
                    alt="Mutter und Kind im liebevollen Moment mit Diffuser"
                    style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
             </div>
@@ -212,7 +212,7 @@ function FamiliePage({ onBook }) {
         padding:'0', background:'var(--bg)',
       }}>
         <div style={{position:'relative', overflow:'hidden', maxHeight:520}}>
-          <img src="assets/heros/familie-erwachsene.png"
+          <img src="assets/heros/familie-erwachsene.jpg"
                alt="Auch Erwachsene brauchen Ruhe — Lavendel, Tee und kleine Rituale für jeden Tag"
                style={{display:'block', width:'100%', height:'auto', objectFit:'cover'}}/>
         </div>
