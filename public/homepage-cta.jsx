@@ -38,6 +38,18 @@ function HomepageCTA({ onBook }) {
           border:'none', padding:'16px 36px', borderRadius:999, cursor:'pointer',
           letterSpacing:'0.01em',
         }}>Kennenlerngespräch vereinbaren</button>
+
+        <p style={{
+          fontFamily:'var(--font-body)', fontSize:16, lineHeight:1.6,
+          color:'rgba(250,246,239,0.88)', margin:'32px auto 0', maxWidth:600,
+        }}>
+          Lieber erst in Ruhe reinschnuppern?{' '}
+          <a href="#" target="_blank" rel="noopener noreferrer" style={{
+            color:'var(--cream-50)', fontWeight:600,
+            textDecoration:'underline', textUnderlineOffset:'3px',
+            textDecorationColor:'var(--accent)',
+          }}>Starte mit dem kostenfreien 10-Tage-E-Mail-Kurs →</a>
+        </p>
       </div>
     </section>
   );
