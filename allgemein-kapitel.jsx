@@ -147,7 +147,7 @@ function AllgemeinKapitel({ onBook }) {
               ['Verdünnen', 'Auf der Haut gehören sie in ein Trägeröl, nie pur auf empfindliche Stellen.'],
               ['Erst testen', 'Vor der ersten Anwendung an einer kleinen Hautstelle prüfen.'],
               ['Zitrusöle & Sonne', 'Manche Zitrusöle machen die Haut lichtempfindlich, nach dem Auftragen direkte Sonne meiden.'],
-              ['Augen & Schleimhäute aussparen', 'Nicht in die Augen bringen und nicht einnehmen.'],
+              ['Augen & Schleimhäute aussparen', 'Nicht in die Augen bringen.'],
               ['Besondere Umsicht', 'Bei Kindern, in der Schwangerschaft, bei Vorerkrankungen und im Umgang mit Tieren gelten eigene Regeln.'],
               ['Richtig lagern', 'Kühl, dunkel und außerhalb der Reichweite von Kindern.'],
             ].map((row, i) => (
