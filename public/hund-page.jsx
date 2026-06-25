@@ -54,8 +54,8 @@ function HundPage({ onBook }) {
               <p style={proseLgHund}>
                 Bei uns sind es kleine Rituale im Alltag: ein ruhiger Moment beim Bürsten, ein
                 angenehmer Duft im Raum am Abend, ein bisschen Entspannung nach einem langen
-                Spaziergang. Mir geht es dabei ums Wohlfühlen und um unsere gemeinsame Zeit,
-                nicht um die Behandlung von Beschwerden. Dafür ist und bleibt deine Tierärztin
+                Spaziergang. Mir geht es dabei ums Wohlfühlen und um unsere gemeinsame Zeit.
+                Bei gesundheitlichen Fragen ist und bleibt deine Tierärztin
                 oder dein Tierarzt die richtige Adresse.
               </p>
             </div>

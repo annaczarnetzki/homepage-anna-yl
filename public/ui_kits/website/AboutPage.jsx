@@ -33,7 +33,7 @@ function AboutPage({ onBook }) {
 
           <div style={{display:'flex', flexDirection:'column', gap:20}}>
             <p style={proseLg}>
-              Ich bin 1985 geboren, lebe in Magdeburg mit meinem Partner und meinen beiden
+              Ich bin 1985 geboren, lebe in der Umgebung von Magdeburg mit meinem Partner und meinen beiden
               Töchtern, und mein Weg hierher war kein gerader.
             </p>
             <p style={proseLg}>

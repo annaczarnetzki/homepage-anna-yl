@@ -26,8 +26,8 @@ function FamiliePage({ onBook }) {
               <p style={proseLgFam}>
                 Kinder sind <strong>besonders sensibel</strong>, und gerade deshalb sprechen
                 sie wunderbar auf ätherische Öle an. Ob Bauchweh vor der Schule, unruhige
-                Nächte, kleine Wehwehchen oder einfach der Wunsch, eine natürliche Hausapotheke
-                aufzubauen: Öle können eine wertvolle Unterstützung sein.
+                Nächte, kleine Wehwehchen oder einfach der Wunsch nach mehr Natürlichkeit
+                im Familienalltag: Öle können eine wertvolle Unterstützung sein.
               </p>
               <p style={proseLgFam}>
                 In unserer Community gibt es einen riesigen <strong>Erfahrungsschatz</strong>
