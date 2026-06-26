@@ -245,6 +245,7 @@ function PferdePage({ onBook }) {
                     letterSpacing:'0.18em', textTransform:'uppercase',
                     color:'var(--brand)', background:'var(--brand-soft)',
                     padding:'6px 14px', borderRadius:999, whiteSpace:'nowrap',
+                    justifySelf:'start',
                   }}>{it.badge}</span>
                 )}
               </div>
