@@ -104,7 +104,7 @@ function HomepageHero({ onBook, onAbout, layout, headline, showImage, showDiplom
             }}>
               <img src="assets/heros/hero-familie.jpg"
                    alt="Anna-Lena Czarnetzki im Garten"
-                   style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
+                   style={{display:'block', width:'100%', height:'100%', objectFit:'cover', objectPosition:'center 22%'}}/>
               {showDiplom && (
                 <img src="assets/seal-gold.png" alt="Diplom — Dipl. Aromaberaterin"
                      style={{
