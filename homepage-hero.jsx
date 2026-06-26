@@ -103,7 +103,7 @@ function HomepageHero({ onBook, onAbout, layout, headline, showImage, showDiplom
               maxHeight: 520,
             }}>
               <img src="assets/heros/hero-familie.jpg"
-                   alt="Anna-Lena mit ihren beiden Hunden"
+                   alt="Anna-Lena Czarnetzki im Garten"
                    style={{display:'block', width:'100%', height:'100%', objectFit:'cover'}}/>
               {showDiplom && (
                 <img src="assets/seal-gold.png" alt="Diplom — Dipl. Aromaberaterin"
