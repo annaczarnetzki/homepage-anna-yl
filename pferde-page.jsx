@@ -273,7 +273,7 @@ function PferdePage({ onBook }) {
             }}>Persönliche Begleitung.</h2>
           </div>
 
-          <div style={{display:'grid', gridTemplateColumns:'repeat(2, 1fr)', gap:24}}>
+          <div style={{display:'grid', gridTemplateColumns:'1fr', gap:24, maxWidth:520, margin:'0 auto'}}>
             <div style={{
               background:'var(--bg-elevated)', borderRadius:'var(--radius-lg)',
               padding:'40px 36px', boxShadow:'var(--shadow-sm)',
@@ -305,39 +305,6 @@ function PferdePage({ onBook }) {
                 color:'var(--cream-50)', background:'var(--brand)',
                 border:'none', padding:'12px 24px', borderRadius:999, cursor:'pointer',
               }}>Termin vereinbaren</button>
-            </div>
-
-            <div style={{
-              background:'var(--bg-warm)', borderRadius:'var(--radius-lg)',
-              padding:'40px 36px', boxShadow:'var(--shadow-sm)',
-              border:'1px solid var(--mist-200)',
-              display:'flex', flexDirection:'column',
-            }}>
-              <DSIcon name="leaf" size={48} variant="gold-on-cream" style={{marginBottom:18}}/>
-              <div style={{
-                fontFamily:'var(--font-body)', fontSize:11, fontWeight:600,
-                letterSpacing:'0.18em', textTransform:'uppercase',
-                color:'var(--accent-strong)', marginBottom:8,
-              }}>Honorar nach Absprache · ca. 60 Min.</div>
-              <h3 style={{
-                fontFamily:'var(--font-display)', fontWeight:500, fontSize:28,
-                margin:'0 0 14px', color:'var(--ink-900)', letterSpacing:'-0.01em',
-                lineHeight:1.2,
-              }}>Persönliche Beratung</h3>
-              <p style={{
-                fontFamily:'var(--font-body)', fontSize:16, lineHeight:1.7,
-                color:'var(--ink-700)', margin:'0 0 24px', textWrap:'pretty', flex:1,
-              }}>
-                <strong>Individuelle Empfehlungen</strong>, telefonisch, per Zoom oder
-                vor Ort nach Absprache.
-              </p>
-              <button onClick={onBook} style={{
-                alignSelf:'flex-start',
-                fontFamily:'var(--font-body)', fontWeight:600, fontSize:15,
-                color:'var(--brand)', background:'transparent',
-                border:'1.5px solid var(--brand)',
-                padding:'12px 24px', borderRadius:999, cursor:'pointer',
-              }}>Anfragen</button>
             </div>
           </div>
         </div>
