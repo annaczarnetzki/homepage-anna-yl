@@ -10,7 +10,7 @@ function AboutPage({ onBook }) {
         headline="Hallo, ich bin Anna-Lena."
         subtitle={<>Mama. Krankenschwester. Sozialarbeiterin. Aromaberaterin.<br/>Und vor allem: ein Mensch, der weiß, wie kostbar das Leben ist.</>}
         image="assets/heros/hero-about.jpg"
-        imageAlt="Anna-Lena Czarnetzki — Portrait im Herbst"
+        imageAlt="Anna-Lena Czarnetzki im Garten, mit Hündin Ronja im Hintergrund"
       />
 
       {/* ============ 1 — Meine Geschichte ============ */}
