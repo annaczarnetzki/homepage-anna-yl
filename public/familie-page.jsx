@@ -371,7 +371,7 @@ function FamiliePage({ onBook }) {
                 Lerne in Ruhe die Möglichkeiten kennen: zehn kurze E-Mails mit kleinen
                 Impulsen und Alltagsideen rund um ätherische Öle. <strong>In deinem Tempo.</strong>
               </p>
-              <a href="#" target="_blank" rel="noopener noreferrer" style={{
+              <a href="kurs.html" target="_blank" rel="noopener noreferrer" style={{
                 alignSelf:'flex-start',
                 fontFamily:'var(--font-body)', fontWeight:600, fontSize:15,
                 color:'var(--brand)', background:'transparent',

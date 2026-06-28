@@ -49,7 +49,7 @@ function SiteFooter({ setPage, onBook }) {
           <FCol title="Folge mir">
             <a href="https://instagram.com/mehr.lebensfreude.ac" target="_blank" rel="noopener noreferrer" style={{...fStatic, textDecoration:'none'}}>@mehr.lebensfreude.ac</a>
             <a href="https://instagram.com/mehr.lebensfreude.ac" target="_blank" rel="noopener noreferrer" style={{...fStatic, textDecoration:'none'}}>Instagram</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" style={{...fStatic, textDecoration:'none'}}>10-Tage-E-Mail-Kurs</a>
+            <a href="kurs.html" target="_blank" rel="noopener noreferrer" style={{...fStatic, textDecoration:'none'}}>10-Tage-E-Mail-Kurs</a>
           </FCol>
         </div>
 

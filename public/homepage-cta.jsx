@@ -44,7 +44,7 @@ function HomepageCTA({ onBook }) {
           color:'rgba(250,246,239,0.88)', margin:'32px auto 0', maxWidth:600,
         }}>
           Lieber erst in Ruhe reinschnuppern?{' '}
-          <a href="#" target="_blank" rel="noopener noreferrer" style={{
+          <a href="kurs.html" target="_blank" rel="noopener noreferrer" style={{
             color:'var(--cream-50)', fontWeight:600,
             textDecoration:'underline', textUnderlineOffset:'3px',
             textDecorationColor:'var(--accent)',

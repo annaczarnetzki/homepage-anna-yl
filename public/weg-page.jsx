@@ -76,7 +76,7 @@ function WegPage({ onBook }) {
                 In deinem Tempo, ganz unverbindlich.
               </p>
             </div>
-            <a href="#" target="_blank" rel="noopener noreferrer" style={{
+            <a href="kurs.html" target="_blank" rel="noopener noreferrer" style={{
               fontFamily:'var(--font-body)', fontWeight:600, fontSize:15,
               color:'var(--cream-50)', background:'var(--brand)',
               border:'none', padding:'15px 30px', borderRadius:999,
