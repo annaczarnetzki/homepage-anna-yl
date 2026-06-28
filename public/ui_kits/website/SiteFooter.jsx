@@ -73,7 +73,8 @@ function SiteFooter({ setPage, onBook }) {
           }}>
             <div>© 2026 Anna-Lena Czarnetzki · Dipl. Aromaberaterin</div>
             <div style={{display:'flex', gap:24}}>
-              <span style={fStatic}>Impressum</span>
+              <a href="#impressum" onClick={(e)=>{e.preventDefault(); setPage('impressum'); window.scrollTo({top:0});}}
+                 style={{...fStatic, textDecoration:'none', cursor:'pointer'}}>Impressum</a>
               <span style={fStatic}>Datenschutz</span>
             </div>
           </div>
