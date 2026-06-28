@@ -51,21 +51,13 @@ function ImpressumPage() {
       <LegalH2>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</LegalH2>
       <p style={{margin:'0 0 4px'}}>Anna-Lena Czarnetzki</p>
       <p style={{margin:'0 0 4px'}}>Aromaberatung</p>
-      <p style={{margin:'0 0 4px'}}>[STRASSE UND HAUSNUMMER]</p>
-      <p style={{margin:'0 0 4px'}}>[PLZ ORT]</p>
+      <p style={{margin:'0 0 4px'}}>Farsleber Str. 54</p>
+      <p style={{margin:'0 0 4px'}}>39128 Magdeburg</p>
       <p style={{margin:'0'}}>Deutschland</p>
 
       <LegalH2>Kontakt</LegalH2>
       <p style={{margin:'0 0 4px'}}>Telefon: <a href="tel:+491637882018" style={link}>0163 / 788 2018</a></p>
       <p style={{margin:'0'}}>E-Mail: <a href="mailto:valor.mut@gmx.de" style={link}>valor.mut@gmx.de</a></p>
-
-      <LegalH2>Umsatzsteuer</LegalH2>
-      <p style={{margin:'0'}}>
-        Als Kleinunternehmerin im Sinne von § 19 UStG wird keine Umsatzsteuer
-        ausgewiesen.
-        {/* Falls eine USt-IdNr vorhanden ist, stattdessen:
-            Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE000000000 */}
-      </p>
 
       <LegalH2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</LegalH2>
       <p style={{margin:'0'}}>Anna-Lena Czarnetzki (Anschrift wie oben)</p>
