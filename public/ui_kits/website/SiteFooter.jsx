@@ -75,7 +75,8 @@ function SiteFooter({ setPage, onBook }) {
             <div style={{display:'flex', gap:24}}>
               <a href="#impressum" onClick={(e)=>{e.preventDefault(); setPage('impressum'); window.scrollTo({top:0});}}
                  style={{...fStatic, textDecoration:'none', cursor:'pointer'}}>Impressum</a>
-              <span style={fStatic}>Datenschutz</span>
+              <a href="#datenschutz" onClick={(e)=>{e.preventDefault(); setPage('datenschutz'); window.scrollTo({top:0});}}
+                 style={{...fStatic, textDecoration:'none', cursor:'pointer'}}>Datenschutz</a>
             </div>
           </div>
         </div>
