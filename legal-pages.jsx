@@ -96,3 +96,109 @@ function ImpressumPage() {
 }
 
 window.ImpressumPage = ImpressumPage;
+
+function DatenschutzPage() {
+  const link = { color:'var(--link, var(--brand))', textDecoration:'underline' };
+  const p = { margin:'0 0 12px' };
+  return (
+    <LegalPage label="Datenschutz" title="Datenschutzerklärung">
+      <LegalH2>1. Verantwortlicher</LegalH2>
+      <p style={{margin:'0 0 4px'}}>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
+      <p style={{margin:'0 0 4px'}}>Anna-Lena Czarnetzki</p>
+      <p style={{margin:'0 0 4px'}}>Farsleber Str. 54, 39128 Magdeburg</p>
+      <p style={{margin:'0 0 4px'}}>E-Mail: <a href="mailto:valor.mut@gmx.de" style={link}>valor.mut@gmx.de</a></p>
+      <p style={{margin:'0'}}>Telefon: <a href="tel:+491637882018" style={link}>0163 / 788 2018</a></p>
+
+      <LegalH2>2. Allgemeines</LegalH2>
+      <p style={p}>
+        Der Schutz deiner persönlichen Daten ist mir wichtig. Ich verarbeite
+        personenbezogene Daten ausschließlich im Rahmen der gesetzlichen
+        Bestimmungen (DSGVO, BDSG). Personenbezogene Daten sind alle Daten, mit
+        denen du persönlich identifiziert werden kannst.
+      </p>
+
+      <LegalH2>3. Deine Rechte</LegalH2>
+      <p style={p}>
+        Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung,
+        Einschränkung der Verarbeitung, Datenübertragbarkeit sowie das Recht,
+        einer Verarbeitung zu widersprechen. Eine erteilte Einwilligung kannst du
+        jederzeit mit Wirkung für die Zukunft widerrufen. Außerdem steht dir ein
+        Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu (in Sachsen-Anhalt:
+        Landesbeauftragter für den Datenschutz Sachsen-Anhalt). Wende dich dafür
+        gern an die oben genannten Kontaktdaten.
+      </p>
+
+      <LegalH2>4. Hosting &amp; Server-Logfiles</LegalH2>
+      <p style={p}>
+        Diese Website wird bei <strong>GitHub Pages</strong> gehostet, einem Dienst
+        der GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.
+        Beim Aufruf der Seite erhebt der Hosting-Anbieter aus technischen Gründen
+        automatisch Informationen (sog. Server-Logfiles), z. B. IP-Adresse, Datum
+        und Uhrzeit des Zugriffs, aufgerufene Seite und verwendeter Browser. Diese
+        Daten dienen der sicheren und stabilen Bereitstellung der Website.
+        Rechtsgrundlage ist das berechtigte Interesse an einem zuverlässigen Betrieb
+        (Art. 6 Abs. 1 lit. f DSGVO). Weitere Informationen:{' '}
+        <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement"
+           target="_blank" rel="noopener noreferrer" style={link}>GitHub Privacy Statement</a>.
+      </p>
+
+      <LegalH2>5. SSL-/TLS-Verschlüsselung</LegalH2>
+      <p style={p}>
+        Diese Seite nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung
+        (erkennbar am „https://" in der Adresszeile). Dadurch sind die Daten, die
+        du übermittelst, für Dritte nicht mitlesbar.
+      </p>
+
+      <LegalH2>6. Kontaktformular &amp; Kontaktaufnahme</LegalH2>
+      <p style={p}>
+        Wenn du mir über das Kontaktformular oder per E-Mail eine Anfrage sendest,
+        verarbeite ich die von dir angegebenen Daten (Name, E-Mail-Adresse und
+        deine Nachricht), um deine Anfrage zu bearbeiten und zu beantworten.
+        Rechtsgrundlage ist dein berechtigtes Interesse bzw. die Anbahnung eines
+        Vertragsverhältnisses (Art. 6 Abs. 1 lit. b und f DSGVO).
+      </p>
+      <p style={p}>
+        Für den Versand des Formulars wird der Dienst <strong>Web3Forms</strong>
+        eingesetzt. Die im Formular eingegebenen Daten werden dabei an Web3Forms
+        übermittelt und ausschließlich genutzt, um mir deine Anfrage per E-Mail
+        zuzustellen. Deine Daten gebe ich nicht zu Werbezwecken weiter und lösche
+        sie, sobald sie für die Bearbeitung nicht mehr erforderlich sind.
+      </p>
+
+      <LegalH2>7. Schriften (Google Fonts)</LegalH2>
+      <p style={p}>
+        Zur einheitlichen Darstellung von Schriftarten werden auf dieser Website
+        Schriften von <strong>Google Fonts</strong> (Google Ireland Limited) geladen.
+        Beim Aufruf einer Seite lädt dein Browser die benötigten Schriften von einem
+        Google-Server, wodurch deine IP-Adresse an Google übermittelt wird.
+        Rechtsgrundlage ist das berechtigte Interesse an einer ansprechenden,
+        einheitlichen Darstellung (Art. 6 Abs. 1 lit. f DSGVO). Mehr dazu:{' '}
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={link}>
+          Datenschutzerklärung von Google</a>.
+      </p>
+
+      <LegalH2>8. Externe Skripte / CDN</LegalH2>
+      <p style={p}>
+        Zur Darstellung der Seite werden technische Programmbibliotheken von einem
+        Content-Delivery-Netzwerk (unpkg.com) geladen. Auch hierbei wird deine
+        IP-Adresse an den jeweiligen Anbieter übermittelt. Rechtsgrundlage ist das
+        berechtigte Interesse an einer technisch zuverlässigen Bereitstellung
+        (Art. 6 Abs. 1 lit. f DSGVO).
+      </p>
+
+      <LegalH2>9. Cookies &amp; Tracking</LegalH2>
+      <p style={p}>
+        Diese Website setzt keine eigenen Cookies und verwendet keine Analyse- oder
+        Tracking-Dienste.
+      </p>
+
+      <LegalH2>10. Aktualität</LegalH2>
+      <p style={{margin:'0'}}>
+        Diese Datenschutzerklärung wird angepasst, sobald sich die Datenverarbeitung
+        auf dieser Website ändert.
+      </p>
+    </LegalPage>
+  );
+}
+
+window.DatenschutzPage = DatenschutzPage;

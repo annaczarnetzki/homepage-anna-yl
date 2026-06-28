@@ -155,7 +155,7 @@ function HomePage({ onBook, setPage }) {
 
 function App() {
   const initial = (typeof location !== 'undefined' && location.hash.replace('#','')) || 'home';
-  const validPages = ['home','allgemein','familie','hund','pferde','about','weg','beratung','impressum'];
+  const validPages = ['home','allgemein','familie','hund','pferde','about','weg','beratung','impressum','datenschutz'];
   const [page, setPage] = React.useState(validPages.includes(initial) ? initial : 'home');
   const [booking, setBooking] = React.useState(false);
   React.useEffect(() => { location.hash = page; }, [page]);
@@ -175,6 +175,7 @@ function App() {
         {page==='weg' && <WegPage onBook={onBook}/>}
         {page==='beratung' && <BeratungPage onBook={onBook}/>}
         {page==='impressum' && <ImpressumPage/>}
+        {page==='datenschutz' && <DatenschutzPage/>}
       </main>
       <SiteFooter setPage={setPage} onBook={onBook}/>
       <BookingModal open={booking} onClose={()=>setBooking(false)}/>
